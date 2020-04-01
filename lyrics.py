@@ -2,10 +2,10 @@ import os
 try:
     from bs4 import BeautifulSoup
     import requests
-    import urllib
+    from urllib3 import *
 except ModuleNotFoundError:
     print("Some dependencies were not found on your system. Installing them may take a while.")
-    os.system("python -m pip install bs4 requests urllib")
+    os.system("python -m pip install bs4")
 
 url = "https://search.azlyrics.com/search.php?q={}"
 
